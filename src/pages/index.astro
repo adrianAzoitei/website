@@ -9,12 +9,28 @@ import HorizontalCard from "../components/HorizontalCard.astro";
       <div class="text-xl py-1">Hey there 👋</div>
       <div class="text-5xl font-bold">I'm Adrian Azoitei</div>
       <div class="text-3xl py-3 font-bold">Software Engineer</div>
-      <div class="py-2">
-        <text class="text-lg">
-          Lorem ipsum
-          </text
-        >
-      </div>
+      <div class="relative h-100">
+        <div class="cloud-native absolute top-1/2 left-1/2 transform -translate-y-28 -rotate-30">
+          <svg width="300" height="70">
+            <rect width="300" height="70" style="fill:rgb(128, 128, 128);stroke-width:3;stroke:rgb(0,0,0)" />
+          </svg>
+        </div>
+        <div class="server-side absolute top-1/2 left-1/2 transform -translate-y-28 -rotate-45">
+          <svg width="300" height="60">
+            <rect width="300" height="60" style="fill:rgb(128, 128, 128);stroke-width:3;stroke:rgb(0,0,0)" />
+          </svg>
+        </div>
+        <div class="web absolute top-1/2 left-1/2 transform -translate-x-88 -translate-y-28 rotate-45">
+          <svg width="300" height="50">
+            <rect width="300" height="50" style="fill:rgb(128, 128, 128);stroke-width:3;stroke:rgb(0,0,0)" />
+          </svg>
+        </div>
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" >
+          <svg width="300" height="100">
+            <rect width="300" height="100" style="fill:rgb(255, 0, 10);stroke-width:3;stroke:rgb(0,0,0)" />
+          </svg>
+        </div>
+      </div>      
       <div class="mt-8">
         <a class="btn" href="/" target="_blank"> Let's connect!</a>
       </div>
