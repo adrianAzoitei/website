@@ -4,11 +4,16 @@ module.exports = {
 	theme: {
 		extend: {
 			spacing: {
-			 '88': '22rem'
-			}
+				'88': '22rem'
+			},
+			width: {
+				'13vw': '13vw'
+			},
 		},
 		height: {
 			'100': '30rem',
+			'13vh': '13vh',
+			'30vh': '30vh'
 		   },
 		rotate: {
 			 '-90': '-90deg',
