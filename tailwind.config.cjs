@@ -23,7 +23,10 @@ module.exports = {
 			'30': '30deg',
 			 '180': '180deg',
 			'270': '270deg',
-		   }
+		   },
+		fontFamily: {
+			'mono': ['Space Mono'],
+		  }
 	},
 	plugins: [require("@tailwindcss/typography"),require("daisyui")],
 }
