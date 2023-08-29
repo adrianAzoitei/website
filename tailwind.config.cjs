@@ -26,7 +26,11 @@ module.exports = {
 		   },
 		fontFamily: {
 			'mono': ['Space Mono'],
-		  }
+		  },
+		colors: {
+			'background': '#1D3557',
+			'text': '#F1FAEE'
+			}
 	},
 	plugins: [require("@tailwindcss/typography"),require("daisyui")],
 }

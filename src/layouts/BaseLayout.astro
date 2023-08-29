@@ -20,7 +20,7 @@ const { image, title = SITE_TITLE, description = SITE_DESCRIPTION } = Astro.prop
     <BaseHead title={title} description={description} image={image} />
   </head>
   <body>
-    <div class="py-8 flex flex-col bg-base-100e justify-center h-[100vh] font-mono">
+    <div class="py-8 flex flex-col bg-base-100e justify-center h-[100vh] font-mono text-text">
       <slot />
       <Footer />
     </div>
