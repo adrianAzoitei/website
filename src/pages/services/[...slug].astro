@@ -4,8 +4,8 @@ import ServiceLayout from '../../layouts/ServiceLayout.astro';
 
 export async function getStaticPaths() {
   const services = await getCollection('services');
-  return services.map(entry => ({
-    params: { slug: entry.slug }, props: { entry },
+  return services.map(service => ({
+    params: { slug: service.slug }, props: { entry: service },
   }));
 }
 

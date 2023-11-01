@@ -8,5 +8,5 @@ const serviceCollection = defineCollection({ type: 'content' , schema: ( { image
 })});
 
 export const collections = {
-    'services': serviceCollection
+    "services": serviceCollection
 }
