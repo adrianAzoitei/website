@@ -11,18 +11,18 @@ const { image, title = SITE_TITLE, description = SITE_DESCRIPTION } = Astro.prop
 
 <style>
   body {
-    height: 100vh;
+    /* height: 100vh; */
   }
 </style>
 
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
   <head>
     <BaseHead title={title} description={description} image={image} />
     <ViewTransitions />
   </head>
   <body>
-    <div class="py-8 flex flex-col bg-base-100e justify-center h-[100vh] font-mono text-text">
+    <div class="py-8 flex flex-col bg-base-100e justify-center min-h-[100vh] font-mono bg-background text-text">
       <slot />
       <Footer />
     </div>

@@ -1,9 +1,14 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
 const { frontmatter } = Astro.props;
+import { Image } from 'astro:assets';
+
 ---
 
-<BaseLayout pageTitle={frontmatter.title}>
-  <p><em>{frontmatter.description}</em></p>
+<BaseLayout>
+  <div class="flex flex-col items-center justify-center">
+    <p class="text-2xl">{frontmatter.title}</p>
+    <Image src={frontmatter.heroImage} alt="Web development"/>
+  </div>
   <slot />
 </BaseLayout>

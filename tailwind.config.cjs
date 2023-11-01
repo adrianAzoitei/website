@@ -28,9 +28,9 @@ module.exports = {
 			'mono': ['Space Mono'],
 		  },
 		colors: {
-			'background': '#1D3557',
+			'background': '#2A303C',
 			'text': '#F1FAEE'
 			}
 	},
-	plugins: [require("@tailwindcss/typography"),require("daisyui")],
+	plugins: [require("@tailwindcss/typography")],
 }
