@@ -1,0 +1,11 @@
+---
+import { getCollection } from 'astro:content';
+
+const services = await getCollection('services');
+
+---
+<div class="nav-links">
+    {services.map(service => (
+        <a href={'/services/' + service.slug}>{service.data.title}</a>
+      ))}
+</div>
