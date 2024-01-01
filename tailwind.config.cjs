@@ -29,7 +29,10 @@ module.exports = {
 		  },
 		colors: {
 			'background': '#2A303C',
-			'text': '#F1FAEE'
+			'use-cases': '#2F3541',
+			'use-cases-hover': '#44474F',
+			'text': '#F1FAEE',
+			'link': '#E63946'
 			}
 	},
 	plugins: [require("@tailwindcss/typography")],

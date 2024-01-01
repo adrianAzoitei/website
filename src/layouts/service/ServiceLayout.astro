@@ -1,0 +1,15 @@
+---
+import BaseLayout from "../BaseLayout.astro";
+import '../../styles/markdown.css';
+const { frontmatter } = Astro.props;
+
+---
+<script src="./expandable.ts"></script>
+
+<BaseLayout pageTitle={frontmatter.title}>
+  <div class="flex flex-col items-center justify-center">
+    <div class="text-2xl mb-2">{frontmatter.title}</div>
+    <div class="text-sm max-w-[30vw] text-center">{frontmatter.description}</div>
+  </div>
+  <slot />
+</BaseLayout>

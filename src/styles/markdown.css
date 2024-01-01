@@ -1,0 +1,13 @@
+.hidden-content {
+    max-height: 0px;
+    overflow: hidden;
+}
+
+.transform {
+    transition: all 1s ease-in-out;
+}
+
+.expanded {
+    margin-top: 10px;
+    max-height: 1000px;
+}
