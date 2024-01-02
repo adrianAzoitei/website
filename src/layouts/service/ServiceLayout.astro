@@ -7,6 +7,7 @@ const { frontmatter } = Astro.props;
 <script src="./expandable.ts"></script>
 <script src="https://unpkg.com/@rive-app/canvas@2.7.0" is:inline></script>
 <script>
+  import "https://unpkg.com/@rive-app/canvas@2.7.0"
   const container = document.getElementsByClassName("rive-canvas")[0]
   // @ts-ignore
   const layout = new rive.Layout({
