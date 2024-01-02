@@ -17,6 +17,7 @@
     "@astrojs/sitemap": "^1.0.0",
     "@astrojs/tailwind": "^5.0.2",
     "@fontsource/space-mono": "^5.0.9",
+    "@rive-app/canvas": "^2.9.0",
     "astro": "^3.4.0",
     "daisyui": "^2.27.0",
     "dayjs": "^1.11.7",
