@@ -10,9 +10,9 @@ const { frontmatter } = Astro.props;
   const container = document.getElementsByClassName("rive-canvas")[0]
   // @ts-ignore
   const layout = new rive.Layout({
-  // @ts-ignore
+    // @ts-ignore
     fit: rive.Fit.Contain,
-  // @ts-ignore
+    // @ts-ignore
     alignment: rive.Alignment.Center,
   });
 
@@ -21,8 +21,7 @@ const { frontmatter } = Astro.props;
 
   // @ts-ignore
   const riveInstance = new rive.Rive({
-      // @ts-ignore
-
+    // @ts-ignore
     src: container.dataset.src,
     canvas: riveCanvas,
     layout: layout, // This is optional. Provides additional layout control.
