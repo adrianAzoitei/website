@@ -4,6 +4,7 @@ const serviceCollection = defineCollection({ type: 'content' , schema: ( { image
     title: z.string(),
     description: z.string(),
     id: z.string(),
+    rive: z.string()
 })});
 
 export const collections = {

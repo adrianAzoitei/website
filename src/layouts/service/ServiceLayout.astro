@@ -7,19 +7,23 @@ const { frontmatter } = Astro.props;
 <script src="./expandable.ts"></script>
 <script src="https://unpkg.com/@rive-app/canvas@2.7.0" is:inline></script>
 <script>
+  const container = document.getElementsByClassName("rive-canvas")[0]
   // @ts-ignore
   const layout = new rive.Layout({
-    fit: rive.Fit.Contain, // Change to: rive.Fit.Contain, or Cover
+  // @ts-ignore
+    fit: rive.Fit.Contain,
+  // @ts-ignore
     alignment: rive.Alignment.Center,
   });
 
-  const riveCanvas = document.getElementById("web")
+  // @ts-ignore
+  const riveCanvas = document.getElementById(container.dataset.id)
 
-
+  // @ts-ignore
   const riveInstance = new rive.Rive({
-    // Load a local riv `clean_the_car.riv` or upload your own!
-    src: "../../website/wordpress.riv",
-    // Be sure to specify the correct state machine (or animation) name
+      // @ts-ignore
+
+    src: container.dataset.src,
     canvas: riveCanvas,
     layout: layout, // This is optional. Provides additional layout control.
     autoplay: true,
@@ -45,7 +49,7 @@ const { frontmatter } = Astro.props;
     <div class="text-sm max-w-[80%] md:max-w-[30%] text-center">{frontmatter.description}</div>
   </div>
   <div class="flex items-center justify-center">
-    <canvas id={frontmatter.id} class="max-w-[100%] md:max-w-[50%] md:min-w-[40%]"></canvas>
+    <canvas id={frontmatter.id} data-id={frontmatter.id} data-src={frontmatter.rive} class="rive-canvas max-w-[100%] md:max-w-[50%] md:min-w-[40%]"></canvas>
   </div>
   <slot />
 </BaseLayout>
