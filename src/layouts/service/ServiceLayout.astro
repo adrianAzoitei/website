@@ -4,43 +4,7 @@ import '../../styles/markdown.css';
 const { frontmatter } = Astro.props;
 
 ---
-<script src="./expandable.ts"></script>
-<script>
-  import {Rive, Layout, Fit, Alignment} from '@rive-app/canvas';
-  const container = document.getElementsByClassName("rive-canvas")[0]
-  // @ts-ignore
-  const layout = new Layout({
-    // @ts-ignore
-    fit: Fit.Contain,
-    // @ts-ignore
-    alignment: Alignment.Center,
-  });
-
-  // @ts-ignore
-  const riveCanvas = document.getElementById(container.dataset.id)
-
-  // @ts-ignore
-  const riveInstance = new Rive({
-    // @ts-ignore
-    src: container.dataset.src,
-    canvas: riveCanvas,
-    layout: layout, // This is optional. Provides additional layout control.
-    autoplay: true,
-    onLoad: () => {
-      // Prevent a blurry canvas by using the device pixel ratio
-      riveInstance.resizeDrawingSurfaceToCanvas();
-    }
-  });
-
-  // Resize the drawing surface if the window resizes
-  window.addEventListener(
-    "resize",
-    () => {
-      riveInstance.resizeDrawingSurfaceToCanvas();
-    },
-    false
-  );
-</script>
+<script src="./service.ts"></script>
 
 <BaseLayout pageTitle={frontmatter.title}>
   <div class="flex flex-col items-center justify-center">
