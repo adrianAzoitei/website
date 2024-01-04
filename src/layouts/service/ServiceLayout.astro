@@ -5,23 +5,22 @@ const { frontmatter } = Astro.props;
 
 ---
 <script src="./expandable.ts"></script>
-<script src="https://unpkg.com/@rive-app/canvas@2.7.0" is:inline></script>
 <script>
-  import "https://unpkg.com/@rive-app/canvas@2.7.0"
+  import {Rive, Layout, Fit, Alignment} from '@rive-app/canvas';
   const container = document.getElementsByClassName("rive-canvas")[0]
   // @ts-ignore
-  const layout = new rive.Layout({
+  const layout = new Layout({
     // @ts-ignore
-    fit: rive.Fit.Contain,
+    fit: Fit.Contain,
     // @ts-ignore
-    alignment: rive.Alignment.Center,
+    alignment: Alignment.Center,
   });
 
   // @ts-ignore
   const riveCanvas = document.getElementById(container.dataset.id)
 
   // @ts-ignore
-  const riveInstance = new rive.Rive({
+  const riveInstance = new Rive({
     // @ts-ignore
     src: container.dataset.src,
     canvas: riveCanvas,
