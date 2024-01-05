@@ -12,7 +12,6 @@ const { frontmatter } = Astro.props;
     <div class="text-sm max-w-[80%] md:max-w-[30%] text-center">{frontmatter.description}</div>
   </div>
   <div class="flex items-center justify-center">
-    <canvas id={frontmatter.id} data-id={frontmatter.id} data-src={frontmatter.rive} class="rive-canvas max-w-[100%] md:max-w-[50%] md:min-w-[40%]"></canvas>
   </div>
   <slot />
 </BaseLayout>

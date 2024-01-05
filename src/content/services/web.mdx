@@ -2,18 +2,33 @@
 title: "Web development"
 description: "Leveraging the web is the fastest way to bring your added value to the world."
 id: "web"
-rive: "../../wordpress.riv"
+rive: "../../website/wordpress.riv"
 ---
+import ServiceCard from '../../components/ServiceCard.astro';
 
-<div class="flex flex-col items-center justify-center">
-    <div class="w-[50%] m-0.5 bg-use-cases hover:bg-use-cases-hover text-white font-semibold py-2 px-4 rounded-2xl cursor-pointer border border-white expandable transform">
-        <p class="text-lg">Website (Wordpress)</p>
-        <div class="hidden-content transform">
-            <p class="text-sm">Triend and true, good ol' <a class="text-link" href="https://wordpress.com/" target="_blank">Wordpress</a>. The easiest way to take ownership of your website, leveraging Wordpress's <em>Admin Dashboard</em> and large <em>plugin</em> ecosystem.</p>
-            <p class="text-sm">A website built this way is easy to hand over, especially when you don't care about the code underneath.</p>
-            <p class="text-sm">Check out my work on <a class="text-link" href="https://addvals.com/" target="_blank">addvals.com</a>.</p>
-        </div>
-    </div>
-    <div class="w-[50%] m-0.5 bg-use-cases hover:bg-use-cases-hover text-white font-semibold py-2 px-4 rounded-2xl cursor-pointer border border-white">Website (custom code)</div>
-    <div class="w-[50%] m-0.5 bg-use-cases hover:bg-use-cases-hover text-white font-semibold py-2 px-4 rounded-2xl cursor-pointer border border-white">Web application</div>
+<div class="flex flex-col mx-5 md:mx-0 md:flex-row md:items-start md:justify-start md:h-[55vh]">
+    <ServiceCard title="Website: Wordpress">
+        <canvas id="wordpress" class="rive-canvas max-w-[100%] md:max-w-[50%] md:min-w-[100%] px-[-5px]"></canvas>
+        <p class="text-xs">Triend and true, good ol' <a class="text-link" href="https://wordpress.com/" target="_blank">Wordpress</a>. The easiest way to take ownership of your website, leveraging Wordpress's <em>Admin Dashboard</em> and large <em>plugin</em> ecosystem.</p>
+        <p class="text-xs">A website built this way is easy to hand over, especially when you don't care about the code underneath.</p>
+        <p class="text-xs">Check out my work on <a class="text-link" href="https://addvals.com/" target="_blank">addvals.com</a>.</p>
+    </ServiceCard>
+    <ServiceCard title="Website: handcrafted">
+        <canvas id="custom-code" class="rive-canvas max-w-[100%] md:max-w-[50%] md:min-w-[100%]"></canvas>
+        <p class="text-xs">With a tailor-made solution, the sky is the limit.</p>
+        <p class="text-xs">Popping animations, fancy page transitions, custom styles...</p>
+        <p class="text-xs">Guided by your <em>requirements</em>, your website will look, feel and react exactly like you want it to, down to every stitch.</p>
+    </ServiceCard>
+    <ServiceCard title="Application">
+        <canvas id="wordpress" class="rive-canvas max-w-[100%] md:max-w-[50%] md:min-w-[100%]"></canvas>
+        <p class="text-xs">For those use-cases where what you're after is less static, and more powerful.</p>
+        <p class="text-xs">Less <em>Van Gogh</em>, and more <a class="text-link" href="https://tardis.fandom.com/wiki/Sonic_screwdriver" target="_blank">sonic screwdriver</a>.</p>
+        <p class="text-xs">This is best suited when your use case involves one, or more of:</p>
+        <ul class="text-xs list-disc list-inside">
+            <li>User authentication.</li>
+            <li>Persistence (think: databases).</li>
+            <li>File-sharing.</li>
+            <li>Intelligence (think: business logic, algorithms).</li>
+        </ul>
+    </ServiceCard>
 </div>

@@ -1,13 +1,15 @@
-.hidden-content {
-    max-height: 0px;
+.expandable {
+    height: 0%;
     overflow: hidden;
+    opacity: 0%;
 }
 
 .transform {
-    transition: all 1s ease-in-out;
+    transition: height 1s ease-in-out, opacity 0.5s ease-in-out;
 }
 
 .expanded {
     margin-top: 10px;
-    max-height: 1000px;
+    height: 100%;
+    opacity: 100%;
 }
