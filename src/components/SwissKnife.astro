@@ -74,11 +74,11 @@
 <script>
   import { navigate } from "astro:transitions/client";
   document.addEventListener(`click`, e => {
-    e.preventDefault();
     const target: any = e.target;
     const origin = target.parentNode;
   
-    if (origin.tagName === 'a') {
+    if (origin.tagName === 'a' &&  origin.classList.contains("svg-link")) {
+      e.preventDefault();
       navigate(origin.getAttribute('href'));
     }
   });
@@ -157,7 +157,7 @@
         c5.29,14.12,0.35,54.35-3.53,66.35s-12,32.12-28.24,48.35C352,222.26,154,420.26,154,420.26l-53.29-53.29L383.06,84.61z"/>
     </g>
     <g id="web">
-      <a href="/website/services/web">
+      <a href="/website/services/web" class="svg-link">
       <text transform="matrix(0.8939 -0.4483 0.4483 0.8939 549.2211 539.1763)" class="st0 st3 st4">web</text>
       <path id="knife_web" class="st0 clickable" d="M664.11,385L377.71,565.26c-6.89,4.34-17.19,0.36-23-8.88l0,0c-12.87-20.46,16.82-62.3,32.07-71.9
         l4.9-3.08c5.78-3.64,14.42-0.3,19.3,7.45l6.02,9.56l66-41.54l-6.02-9.56c-4.88-7.75-4.15-16.99,1.63-20.63l151.67-95.46L664.11,385
