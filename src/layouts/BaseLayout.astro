@@ -8,6 +8,19 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 const { title = SITE_TITLE, description = SITE_DESCRIPTION } = Astro.props;
 ---
 
+<style>
+  /* For Webkit-based browsers (Chrome, Safari and Opera) */
+  .scrollbar-hide::-webkit-scrollbar {
+      display: none;
+  }
+
+  /* For IE, Edge and Firefox */
+  .scrollbar-hide {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+  }
+</style>
+
 <html lang="en">
   <head>
     <!-- Global Metadata -->
@@ -22,8 +35,8 @@ const { title = SITE_TITLE, description = SITE_DESCRIPTION } = Astro.props;
     <meta name="description" content={description} />
     <ViewTransitions />
   </head>
-  <body>
-    <div class="py-8 flex flex-col justify-between bg-base-100e min-h-[100vh] font-mono bg-background text-text">
+  <body class="scrollbar-hide">
+    <div class="py-8 flex flex-col justify-between bg-base-100e min-h-[100svh] font-mono bg-background text-text">
       <slot />
       <Footer />
     </div>
