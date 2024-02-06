@@ -26,12 +26,14 @@ module.exports = {
 		   },
 		fontFamily: {
 			'mono': ['Space Mono'],
+			'definition': ['Playfair Display']
 		  },
 		colors: {
 			'background': '#2A303C',
 			'use-cases': '#2F3541',
 			'use-cases-hover': '#44474F',
 			'text': '#F1FAEE',
+			'light': '#76869D',
 			'link': '#E63946'
 			}
 	},
