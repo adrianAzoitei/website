@@ -5,7 +5,6 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://adrianazoitei.github.io',
-  base: 'website',
+  site: 'https://pryingbee.com',
   integrations: [mdx(), sitemap(), tailwind()]
 });
