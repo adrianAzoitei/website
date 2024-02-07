@@ -31,6 +31,8 @@ function setupRiveAnimation() {
         canvas: riveCanvas,
         layout: layout, // This is optional. Provides additional layout control.
         autoplay: true,
+        // @ts-ignore
+        stateMachines: riveCanvas.id === "server-side" ? "default" : null, // why won't this default state machine play?
         onLoad: () => {
           // Prevent a blurry canvas by using the device pixel ratio
           riveInstance.resizeDrawingSurfaceToCanvas();
