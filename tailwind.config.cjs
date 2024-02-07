@@ -26,6 +26,7 @@ module.exports = {
 		   },
 		fontFamily: {
 			'mono': ['Space Mono'],
+			'helvetica': ['Helvetica'],
 			'definition': ['Playfair Display']
 		  },
 		colors: {
